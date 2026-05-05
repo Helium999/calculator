@@ -1,0 +1,18 @@
+h1 {
+    color: green;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
