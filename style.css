@@ -28,8 +28,34 @@ body {
 
 #buttonsPanel {
     display: flex;
+    flex-direction: column;
     width: 400px;
     height: 500px;
     box-sizing: border-box;
     border: 2px solid brown;
+}
+
+button {
+    width: 99px;
+    height: 99px;
+    font-size: large;
+}
+
+.delKeysPanel {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.otherButtons {
+    display:flex;
+}
+
+.numberButtons {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.operators {
+    display:flex;
+    flex-direction: column;
 }
