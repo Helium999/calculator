@@ -32,16 +32,16 @@ function handleInput(key) {
                     '6', '7', '8', '9', '0']
         const operators = ['+', '-', '*', '/']
 
-        if(digits.includes(event.key) && operator === '') {
-            firstNum = firstNum.concat(event.key)
+        if(digits.includes(key) && operator === '') {
+            firstNum = firstNum.concat(key)
         }
-        else if(operators.includes(event.key) && firstNum !== '' && operator === '') {
-            operator = operator.concat(event.key)
+        else if(operators.includes(key) && firstNum !== '' && operator === '') {
+            operator = key
         }
-        else if(digits.includes(event.key) && operator != '') {
-            secondNum = secondNum.concat(event.key)
+        else if(digits.includes(key) && operator != '') {
+            secondNum = secondNum.concat(key)
         }
-        else if(event.key === 'Shift') {
+        else if(key === 'Shift') {
 
         }
         else {
@@ -53,3 +53,8 @@ document.addEventListener("keydown", (event) => {
     handleInput(event.key);
 });
 
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+        handleInput(button.dataset.key);
+    });
+});
