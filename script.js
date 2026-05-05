@@ -41,9 +41,43 @@ function handleInput(key) {
         else if(digits.includes(key) && operator != '') {
             secondNum = secondNum.concat(key)
         }
-        else if(key === 'Shift') {
-
+        else if(key === 'Shift') {}
+        else if(key === '.') {
+            if(firstNum === '') {
+                firstNum = '0.'
+            }
+            else if(!firstNum.includes('.') && operator === '') {
+                firstNum = firstNum.concat(key)
+            }
+            else if(secondNum === '') {
+                secondNum = '0.'
+            }
+            else if(!secondNum.includes('.') && operator !== '') {
+                secondNum = secondNum.concat(key)
+            }
+            else {
+                console.log("Invalid")
+            }
         }
+        else if(key === 'cls') {
+            firstNum = ''
+            secondNum = ''
+            operator = ''
+        }
+        else if(key === "Backspace") {
+            if(operator === '') {
+                firstNum = firstNum.slice(0, -1);
+            }
+            else {
+                if(secondNum === '') {
+                    operator = ''
+                }
+                else {
+                    secondNum = secondNum.slice(0, -1);
+                }
+            }
+        }
+
         else {
             console.log("Invalid")
         }
