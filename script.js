@@ -38,7 +38,7 @@ document.addEventListener("keydown", event => {
         else if(operators.includes(event.key) && firstNum !== '' && operator === '') {
             operator = operator.concat(event.key)
         }
-        else if(digits.includes(event.key) && operators != '') {
+        else if(digits.includes(event.key) && operator != '') {
             secondNum = secondNum.concat(event.key)
         }
         else if(event.key === 'Shift') {
