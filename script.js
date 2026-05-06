@@ -38,7 +38,7 @@ function handleInput(key) {
         else if(operators.includes(key) && firstNum !== '' && operator === '') {
             operator = key
         }
-        else if(digits.includes(key) && operator != '') {
+        else if(digits.includes(key) && operator !== '') {
             secondNum = secondNum.concat(key)
         }
         else if(key === 'Shift') {}
