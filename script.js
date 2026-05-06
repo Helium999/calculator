@@ -114,7 +114,12 @@ function compute(firstNum, operator, secondNum) {
         result = multiply(firstNum, secondNum)
     }
     else {
-        result = divide(firstNum, secondNum)
+        if(secondNum === '0') {
+            result = "NaN"
+        }
+        else {
+            result = divide(firstNum, secondNum)
+        }
     }
     result = truncateDecimals(result, 4)
     return result
