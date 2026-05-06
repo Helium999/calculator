@@ -94,6 +94,7 @@ document.querySelectorAll("button").forEach(button => {
 });
 
 function compute(firstNum, operator, secondNum) {
+    let result;
     if(operator === '+') {
         result = add(firstNum, secondNum)
     }
