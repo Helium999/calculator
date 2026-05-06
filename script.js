@@ -63,6 +63,7 @@ function handleInput(key) {
             firstNum = ''
             secondNum = ''
             operator = ''
+            outputPanel.innerText = ''
         }
         else if(key === "Backspace") {
             if(operator === '') {
