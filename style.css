@@ -45,6 +45,8 @@ body {
     width: 396px;
     height: 500px;
     border: 1px solid white;
+    border-radius: 2%;
+    overflow: hidden;
 }
 
 button {
