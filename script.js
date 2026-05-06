@@ -112,15 +112,17 @@ function compute(firstNum, operator, secondNum) {
 
 function displayResult() {
     outputPanel = document.getElementById("outputPanel")
-    outputPanel.innerText = compute(firstNum, operator, secondNum)
-    
+    result = compute(firstNum, operator, secondNum)
+    outputPanel.innerText = result
+
     firstNum = result.toString();
     secondNum = '';
     operator = '';
 }
 
-document.addEventListener("keyup", (event) => {
+document.addEventListener("keydown", (event) => {
     if(event.key === 'Enter') {
+        event.preventDefault()
         displayResult()
     }
 })
