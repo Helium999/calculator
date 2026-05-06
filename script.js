@@ -121,9 +121,21 @@ function displayResult() {
     operator = '';
 }
 
-document.addEventListener("keydown", (event) => {
-    if(event.key === 'Enter') {
+function enterKey(key) {
+    if(key === 'Enter') {
         event.preventDefault()
         displayResult()
     }
+}
+
+document.addEventListener("keydown", (event) => {
+    enterKey(event.key)
+})
+
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+        if(button.dataset.key === 'Enter') {
+            enterKey(button.dataset.key)
+        }
+    })
 })
