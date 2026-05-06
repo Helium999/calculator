@@ -113,3 +113,9 @@ function displayResult(result) {
     outputPanel = document.getElementById("outputPanel")
     outputPanel.innerText = compute(firstNum, operator, secondNum)
 }
+
+document.addEventListener("keyup", (event) => {
+    if(event.key === 'Enter') {
+        displayResult()
+    }
+})
