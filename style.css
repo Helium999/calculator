@@ -20,6 +20,11 @@ body {
 
 #outputPanel {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bold;
     width: 400px;
     height: 100px;
     box-sizing: border-box;
