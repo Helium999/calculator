@@ -1,20 +1,20 @@
 function add(a, b) {
-    const sum = a + b
+    const sum = Number(a) + Number(b)
     return sum
 }
 
 function subtract(a, b) {
-    const difference = a - b
+    const difference = Number(a) - Number(b)
     return difference
 }
 
 function multiply(a, b) {
-    const product = a*b
+    const product = Number(a)*Number(b)
     return product
 }
 
 function divide(a, b) {
-    const quotient = a/b
+    const quotient = Number(a)/Number(b)
     return quotient
 }
 
