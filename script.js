@@ -23,6 +23,12 @@ function truncateDecimals(number, digits) {
     return Math.trunc(number * multiplier) / multiplier;
 }
 
+function updateDisplay() {
+    const outputPanel = document.getElementById("outputPanel");
+
+    outputPanel.innerText = `${firstNum} ${operator} ${secondNum}`;
+}
+
 let firstNum = ''
 let secondNum = ''
 let operator = ''
@@ -82,6 +88,8 @@ function handleInput(key) {
         else {
             console.log("Invalid")
         }
+
+updateDisplay()
 }
 
 document.addEventListener("keydown", (event) => {
