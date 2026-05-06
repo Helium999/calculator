@@ -92,3 +92,24 @@ document.querySelectorAll("button").forEach(button => {
         handleInput(button.dataset.key);
     });
 });
+
+function compute(firstNum, operator, secondNum) {
+    if(operator === '+') {
+        result = add(firstNum, secondNum)
+    }
+    else if(operator === '-') {
+        result = subtract(firstNum, secondNum)
+    }
+    else if(operator === '*') {
+        result = multiply(firstNum, secondNum)
+    }
+    else {
+        result = divide(firstNum, secondNum)
+    }
+    return result
+}
+
+function displayResult(result) {
+    outputPanel = document.getElementById("outputPanel")
+    outputPanel.innerText = compute(firstNum, operator, secondNum)
+}
