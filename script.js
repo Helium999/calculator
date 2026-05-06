@@ -110,7 +110,7 @@ function compute(firstNum, operator, secondNum) {
     return result
 }
 
-function displayResult(result) {
+function displayResult() {
     outputPanel = document.getElementById("outputPanel")
     outputPanel.innerText = compute(firstNum, operator, secondNum)
 }
