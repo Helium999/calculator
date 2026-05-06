@@ -116,6 +116,7 @@ function compute(firstNum, operator, secondNum) {
     else {
         result = divide(firstNum, secondNum)
     }
+    result = truncateDecimals(result, 4)
     return result
 }
 
