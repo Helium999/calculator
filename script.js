@@ -55,7 +55,7 @@ function handleInput(key) {
             else if(!firstNum.includes('.') && operator === '') {
                 firstNum = firstNum.concat(key)
             }
-            else if(secondNum === '') {
+            else if(secondNum === '' && operator !== '') {
                 secondNum = '0.'
             }
             else if(!secondNum.includes('.') && operator !== '') {
